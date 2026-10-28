@@ -1,0 +1,26 @@
+{
+  "extName": {
+    "message": "Wuji Translate"
+  },
+  "extDescription": {
+    "message": "Translation that feels natural."
+  },
+  "setupReady": {
+    "message": "Your extension is ready for development."
+  },
+  "interfaceLanguage": {
+    "message": "Interface language"
+  },
+  "followBrowser": {
+    "message": "Follow browser"
+  },
+  "languageEnglish": {
+    "message": "English"
+  },
+  "languageChinese": {
+    "message": "简体中文"
+  },
+  "saveFailed": {
+    "message": "Could not save the language. Please try again."
+  }
+}
