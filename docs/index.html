@@ -1,0 +1,326 @@
+<!-- 此文件由 scripts/generate-docs.mjs 生成，请修改 website/ 下的源文件 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>无机翻译 Wuji Translate — 让翻译更自然，没有机器味</title>
+  <meta name="description" content="专为大语言模型打造的浏览器翻译插件。自带 API Key，结合智能译文缓存与上下文理解，还原流畅自然的双语阅读体验。" />
+  <link rel="canonical" href="https://wuji-craft.github.io/wuji-translate/zh/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://wuji-craft.github.io/wuji-translate/zh/" />
+  <link rel="alternate" hreflang="en" href="https://wuji-craft.github.io/wuji-translate/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://wuji-craft.github.io/wuji-translate/zh/" />
+  <link rel="icon" type="image/png" sizes="128x128" href="./assets/logo.png" />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="brand">
+        <img class="logo-mark" src="./assets/logo.png" alt="" width="28" height="28" />
+        <span>无机翻译</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#demo">效果演示</a>
+        <a href="#features">核心特性</a>
+        <a href="#guide">快速开始</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/" target="_blank" class="icon-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          <span>GitHub</span>
+        </a>
+        <nav class="segmented" aria-label="切换语言">
+          <a href="./zh/" lang="zh-CN" hreflang="zh-CN" class="active" aria-current="page">中文</a>
+          <a href="./en/" lang="en" hreflang="en">EN</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <a href="https://github.com/" target="_blank" class="pill-badge">
+          <span class="status-dot"></span>
+          <span>100% 开源 · 使用你自己的 API Key ↗</span>
+        </a>
+
+        <h1>
+          <span>让翻译更自然，</span><br />
+          <span class="muted-accent">没有机器味。</span>
+        </h1>
+
+        <p class="hero-sub">由 LLM 驱动的浏览器翻译插件，不集成传统免费机翻引擎，需配置你自己的模型 API。结合上下文生成符合语境的译文，还原流畅自然的双语阅读体验。</p>
+
+        <div class="cta-group">
+          <a href="https://github.com/wuji-craft/wuji-translate/releases/download/v1.0.0/wuji-translate-1.0.0.zip" class="btn btn-primary">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>下载扩展包 (ZIP)</span>
+          </a>
+          <a href="https://github.com/" target="_blank" class="btn btn-secondary">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <span>查看源码</span>
+          </a>
+        </div>
+
+        <p class="hero-note">即将上架 Chrome / Edge / Firefox 商店 · API 调用零加价 · 配置与缓存本地保存</p>
+      </div>
+    </section>
+
+    <!-- Browser Window Demo -->
+    <section id="demo" class="showcase-section">
+      <div class="container">
+        <div class="showcase-controls">
+          <div class="demo-tabs">
+            <button class="demo-tab active" onclick="switchDemo('bilingual', this)">网页双语对照</button>
+            <button class="demo-tab" onclick="switchDemo('selection', this)">划词 / 段落翻译</button>
+            <button class="demo-tab" onclick="switchDemo('input', this)">输入框翻译</button>
+          </div>
+        </div>
+
+        <div class="browser-frame">
+          <div class="browser-bar">
+            <div class="traffic-lights">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="url-bar">example.com/articles/open-web</div>
+          </div>
+
+          <div class="browser-body">
+            <!-- 演示内容 -->
+            <div class="webpage-canvas">
+              <!-- Demo 1: Bilingual -->
+              <div id="demo-bilingual" class="demo-panel active">
+                <div class="article-meta">Technology Essay · 4 min read</div>
+                <div class="article-title">A More Open Web</div>
+                <div class="article-title-zh">更开放的网络</div>
+
+                <div class="bilingual-block">
+                  <p class="bilingual-en">To make the web truly useful, we need tools that break language barriers and let information flow naturally without breaking the page layout.</p>
+                  <p class="bilingual-zh">为了让互联网真正发挥价值，我们需要能打破语言隔阂、且不破坏原有排版的工具，让信息自然流动。</p>
+                </div>
+
+                <div class="bilingual-block" style="margin-bottom: 0;">
+                  <p class="bilingual-en">With context-aware LLMs and local caching, translations respect the author's tone while loading in milliseconds on repeat visits.</p>
+                  <p class="bilingual-zh">借助上下文感知的大模型与本地缓存机制，译文既能忠实还原作者语气，再次访问时还能毫秒级秒开。</p>
+                </div>
+              </div>
+
+              <!-- Demo 2: Selection -->
+              <div id="demo-selection" class="demo-panel">
+                <div class="article-meta">Context-Aware Selection</div>
+                <div class="article-title" style="margin-bottom: 14px;">Understanding Technical Nuance</div>
+                <p class="bilingual-en">
+                  Traditional translation engines often struggle with idiomatic expressions. For instance,
+                  <span class="highlight-text">“shipping fast shouldn't mean cutting corners on reliability.”</span>
+                  An LLM reads the surrounding paragraph before translating.
+                </p>
+
+                <div class="selection-popover">
+                  <div class="popover-header">
+                    <span style="display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--ink);">
+                      <span class="status-dot"></span> 无机翻译 · 语境释义
+                    </span>
+                    <span>DeepSeek V4.1 Flash</span>
+                  </div>
+                  <div class="popover-result">
+                    “快速迭代上线，并不意味着可以在系统可靠性上偷工减料。”
+                  </div>
+                </div>
+              </div>
+
+              <!-- Demo 3: Input Box -->
+              <div id="demo-input" class="demo-panel">
+                <div class="article-meta">Input Box Translation · X / GitHub / Email</div>
+                <div class="article-title" style="margin-bottom: 8px;">直接用母语输入外语回复</div>
+                <p style="font-size:13.5px;color:var(--ink-secondary);margin-bottom:14px;">
+                  在任意网页输入框输入中文后按下快捷键，自动替换为地道的目标语言。
+                </p>
+
+                <div class="comment-box">
+                  <div class="comment-input">
+                    <div style="color:var(--ink-muted);font-size:12px;margin-bottom:6px;">输入原文：这个方案非常清晰，我们下周可以合并这个 PR。</div>
+                    <div style="font-weight:500;">→ This approach is crystal clear—we can merge this PR next week.</div>
+                  </div>
+                  <div class="input-hint">
+                    <span>支持自定义语气（技术讨论 / 邮件 / 社交）</span>
+                    <span><span class="kbd">⌥</span> + <span class="kbd">T</span> 一键转换</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>注重阅读体验和效率</h2>
+          <p>没有花哨冗余的功能，针对大模型原生设计，翻译精准且省 Token。</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-key-round" aria-hidden="true" focusable="false"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"></path><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>
+            </div>
+            <h3>使用你自己的 API Key</h3>
+            <p>支持 DeepSeek、OpenAI、Claude 及自定义兼容接口（含本地 Ollama），实时查看模型余额。</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database" aria-hidden="true" focusable="false"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+            </div>
+            <h3>智能译文缓存</h3>
+            <p>针对大模型延迟与并发做了深度优化，已翻译内容本地哈希缓存复用。</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-cursor-input" aria-hidden="true" focusable="false"><path d="M12 20h-1a2 2 0 0 1-2-2 2 2 0 0 1-2 2H6"></path><path d="M13 8h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7"></path><path d="M5 16H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h1"></path><path d="M6 4h1a2 2 0 0 1 2 2 2 2 0 0 1 2-2h1"></path><path d="M9 6v12"></path></svg>
+            </div>
+            <h3>输入框快捷翻译</h3>
+            <p>搜索框、评论区、或写邮件时直接输入母语，一键替换为自然地道的外语（保留换行格式）。</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-a" aria-hidden="true" focusable="false"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"></path><path d="m8 13 4-7 4 7"></path><path d="M9.1 11h5.7"></path></svg>
+            </div>
+            <h3>自定义术语库</h3>
+            <p>本地自定义术语库，翻译时「术语」会自动匹配进入大模型上下文。</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square-text" aria-hidden="true" focusable="false"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path><path d="M7 11h10"></path><path d="M7 15h6"></path><path d="M7 7h8"></path></svg>
+            </div>
+            <h3>翻译自带语境</h3>
+            <p>结合上下文理解选中的单词与短语，提供当前语境下的释义和翻译。</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <h3>代码开源，数据本地保存</h3>
+            <p>所有代码开源可审计。API Key、术语库与缓存均保存在浏览器本地，翻译请求直接发送至你选择的大模型。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use -->
+    <section id="guide" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>三步开始使用</h2>
+          <p>完成简单配置，即可开始流畅的双语阅读。</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="card">
+            <span class="step-num">01</span>
+            <h3>安装浏览器插件</h3>
+            <p>下载并解压 ZIP 安装包，在浏览器扩展管理页开启“开发者模式”，加载已解压的插件。</p>
+          </div>
+
+          <div class="card">
+            <span class="step-num">02</span>
+            <h3>填入你的 API Key</h3>
+            <p>打开插件设置，选择 DeepSeek、OpenAI 或自定义接口，填入对应的 API Key。</p>
+          </div>
+
+          <div class="card">
+            <span class="step-num">03</span>
+            <h3>开始双语阅读</h3>
+            <p>打开网页，一键翻译全文，也可以悬停段落或选中文字查看译文。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>常见问题</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button class="faq-trigger" onclick="toggleFaq(this)">
+              <span>插件需要付费吗？</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">插件本身完全免费且 100% 开源。你需要自行配置大模型服务商的 API Key（例如 DeepSeek、OpenAI 等），接口调用费用直接由对应服务商按实际用量收取，没有任何中间商加价。</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" onclick="toggleFaq(this)">
+              <span>大模型翻译会不会很慢、很耗费额度？</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">无机翻译针对 LLM 做了智能分段、并发控制和本地缓存管理。同一段落或重复浏览的网页会直接命中本地缓存，不仅毫秒级显示，也不会重复消耗 API Token。你也可以选择如 DeepSeek Flash 等高性价比极速模型。</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" onclick="toggleFaq(this)">
+              <span>我的 API Key 和浏览数据会上传到你们服务器吗？</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">不会。插件没有开发者自有后端服务器，你的 API Key、个人偏好和缓存都仅储存在本地浏览器中；翻译请求由浏览器直接发往你配置的大模型接口。</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" onclick="toggleFaq(this)">
+              <span>如何通过 ZIP 安装包手动安装？</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <ol class="install-steps">
+                <li>下载并解压 ZIP 安装包。</li>
+                <li>
+                  在浏览器地址栏输入对应地址：
+                  <ul class="install-addresses">
+                    <li>Chrome：<code>chrome://extensions</code></li>
+                    <li>Edge：<code>edge://extensions</code></li>
+                  </ul>
+                </li>
+                <li>开启“开发者模式”，点击“加载已解压的扩展程序”（Load unpacked），选择解压后包含 manifest.json 的文件夹。</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="brand" style="font-size:14px;">
+        <img class="logo-mark" src="./assets/logo.png" alt="" width="22" height="22" />
+        <span>无机翻译 · Wuji Translate</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/" target="_blank">问题反馈</a>
+        <a href="#privacy">隐私政策</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/main.js" defer></script>
+</body>
+</html>
