@@ -47,6 +47,102 @@ a {
   padding: 0 24px;
 }
 
+/* 隐私政策 */
+.policy-page {
+  min-height: 100vh;
+}
+
+.policy-header {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.policy-header-inner,
+.policy-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.policy-language-links {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+
+.policy-language-links a.active {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.policy-content {
+  max-width: 760px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.policy-content h1 {
+  font-size: clamp(32px, 5vw, 44px);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.policy-content .policy-meta {
+  color: var(--ink-muted);
+  margin-bottom: 40px;
+}
+
+.policy-content h2 {
+  font-size: 21px;
+  margin: 36px 0 12px;
+}
+
+.policy-content p,
+.policy-content li {
+  color: var(--ink-secondary);
+}
+
+.policy-content p + p {
+  margin-top: 14px;
+}
+
+.policy-content ul {
+  margin: 12px 0 0 24px;
+}
+
+.policy-content li + li {
+  margin-top: 6px;
+}
+
+.policy-contact {
+  font-weight: 600;
+  color: var(--ink) !important;
+}
+
+.policy-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  color: var(--ink-muted);
+  font-size: 14px;
+}
+
+@media (max-width: 560px) {
+  .policy-header-inner,
+  .policy-footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .policy-content {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+}
+
 /* 正式标志 */
 .logo-mark {
   display: block;
@@ -677,6 +773,30 @@ a {
 .install-addresses code {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.95em;
+  overflow-wrap: anywhere;
+}
+
+.install-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 12px 14px;
+  border: 1px solid #fcd34d;
+  border-radius: 8px;
+  background: #fffbeb;
+  color: #92400e;
+  font-weight: 600;
+}
+
+.install-warning svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #d97706;
+}
+
+.install-warning span {
+  min-width: 0;
   overflow-wrap: anywhere;
 }
 
